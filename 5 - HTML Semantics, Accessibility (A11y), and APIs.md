@@ -1227,7 +1227,7 @@ Service Workers (SW) are a powerful type of Web Worker acting as a proxy server 
 ```mermaid
 graph TD
     subgraph Page Context
-        Reg(navigator.serviceWorker.register('/sw.js')) --> Downloading
+        Reg("navigator.serviceWorker.register('/sw.js')") --> Downloading
     end
 
     subgraph Service Worker Context
@@ -1247,7 +1247,7 @@ graph TD
     FetchEvent --> Respond(Respond from Cache / Network)
     PushEvent --> Notify(Show Notification)
     SyncEvent --> SyncData(Background Sync)
-    Respond --> Page Context
+    Respond --> PageContext
     Notify --> User
     SyncData --> Network
 ```

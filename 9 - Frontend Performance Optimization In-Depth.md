@@ -116,11 +116,11 @@ graph TD
     A --> C(Real User Monitoring - RUM);
 
     B --> B1[Controlled Environment];
-    B --> B2[Lab Data (Lighthouse, WebPageTest)];
+    B --> B2["Lab Data (Lighthouse, WebPageTest)"];
     B --> B3[Use Cases: Regression Testing, Benchmarking];
 
     C --> C1[Actual User Browsers];
-    C --> C2[Field Data (CWV, Custom Metrics)];
+    C --> C2["Field Data (CWV, Custom Metrics)"];
     C --> C3[Use Cases: Real Experience Measurement, Production Bottlenecks];
 
     subgraph Legend
@@ -726,7 +726,7 @@ Rendering strategies significantly impact initial load performance (FCP, LCP, TT
 
 ```mermaid
 graph TD
-    subgraph CSR [Client-Side Rendering]
+    subgraph "CSR [Client-Side Rendering]"
         direction LR
         CSR_Browser -- Request --> CSR_Server[Static Server]
         CSR_Server -- Minimal HTML + JS Bundle --> CSR_Browser
@@ -735,7 +735,7 @@ graph TD
         CSR_API -- Data --> CSR_Render
     end
 
-    subgraph SSR [Server-Side Rendering]
+    subgraph "SSR [Server-Side Rendering]"
         direction LR
         SSR_Browser -- Request --> SSR_Server[Node.js Server]
         SSR_Server -- Fetches Data --> SSR_API[API]
@@ -744,14 +744,14 @@ graph TD
         SSR_Browser -- Displays HTML, Loads JS --> SSR_Hydrate[Hydrates Page]
     end
 
-    subgraph SSG [Static Site Generation]
+    subgraph "SSG [Static Site Generation]"
         direction LR
         SSG_Build[Build Process] -- Fetches Data --> SSG_API[API]
         SSG_API -- Data --> SSG_Build
         SSG_Build -- Generates HTML --> SSG_Deploy[Deploy HTML to CDN]
         SSG_Browser -- Request --> SSG_CDN[CDN]
         SSG_CDN -- Static HTML --> SSG_Browser
-        SSG_Browser -- Displays HTML, Loads JS --> SSG_Hydrate[Hydrates Page (Optional)]
+        SSG_Browser -- Displays HTML, Loads JS --> SSG_Hydrate["Hydrates Page (Optional)"]
     end
 
     style CSR fill:#ffe,stroke:#333,stroke-width:1px

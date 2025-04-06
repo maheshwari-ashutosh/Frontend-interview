@@ -96,8 +96,8 @@ graph TD
 
     subgraph Task Queues
         direction LR
-        MQ[Macrotask Queue (setTimeout, I/O)]
-        mQ[Microtask Queue (Promises, queueMicrotask)]
+        MQ[Macrotask Queue]
+        mQ[Microtask Queue]
     end
 
     G --> MQ;

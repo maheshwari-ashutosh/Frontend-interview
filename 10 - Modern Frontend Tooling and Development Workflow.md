@@ -403,17 +403,17 @@ graph TD
         B3 --> B5[Request /node_modules/react/index.js];
     end
 
-    subgraph Vite Dev Server (VDS)
-        VDS -->|Intercepts| T1[Transform App.jsx (esbuild)];
+    subgraph "Vite Dev Server (VDS)"
+        VDS -->|Intercepts| T1["Transform App.jsx (esbuild)"];
         T1 --> B2;
-        VDS -->|Intercepts| T2[Transform utils.js (esbuild)];
+        VDS -->|Intercepts| T2["Transform utils.js (esbuild)"];
         T2 --> B6[Serve Transpiled utils.js];
         VDS -->|Intercepts| PB[Serve Pre-Bundled react.js];
         PB --> B7[Serve Pre-Bundled react.js];
     end
 
-    subgraph Pre-Bundling (on server start)
-        NPM[node_modules] -->|esbuild| PBD[Pre-Bundled Dependencies (e.g., react.js)];
+    subgraph "Pre-Bundling (on server start)"
+        NPM[node_modules] -->|esbuild| PBD["Pre-Bundled Dependencies (e.g., react.js)"];
     end
 
     B4 --> VDS;
@@ -694,7 +694,7 @@ Manually running linters/formatters is unreliable. Automation is key:
 graph TD
     A[Developer runs `git commit`] --> B{Husky `pre-commit` hook};
     B --> C[Run `lint-staged`];
-    C --> D{Identify staged files (e.g., *.js, *.css)};
+    C --> D{"Identify staged files (e.g., *.js, *.css)"};
     D --> E[Run ESLint/Prettier/Stylelint on staged files];
     E --> F{Checks Pass?};
     F -- Yes --> G[Commit Successful];
@@ -896,12 +896,12 @@ graph TD
     end
 
     subgraph Trunk-Based Development
-        TBDM1[main] --> C1[Commit 1 (Feat X - Flag Off)];
-        C1 --> C2[Commit 2 (Fix Y)];
-        C2 --> C3[Commit 3 (Feat Z - Flag Off)];
-        C3 --> DeployTBD[Deploy (Flags Off)];
-        C3 --> C4[Commit 4 (Enable Feat X Flag)];
-        C4 --> DeployTBD2[Deploy (Feat X On)];
+        TBDM1[main] --> C1["Commit 1 (Feat X - Flag Off)"];
+        C1 --> C2["Commit 2 (Fix Y)"];
+        C2 --> C3["Commit 3 (Feat Z - Flag Off)"];
+        C3 --> DeployTBD["Deploy (Flags Off)"];
+        C3 --> C4["Commit 4 (Enable Feat X Flag)"];
+        C4 --> DeployTBD2["Deploy (Feat X On)"];
     end
 
     style Gitflow fill:#ece,stroke:#333,stroke-width:1px

@@ -412,16 +412,16 @@ Module Federation, introduced in Webpack 5, is a game-changer for run-time integ
 
   ```mermaid
   graph TD
-      A[Browser loads Host App (Shell)] --> B{Host App requests 'remoteApp/Component'};
+      A["Browser loads Host App (Shell)"] --> B{Host App requests 'remoteApp/Component'};
       B --> C{Module Federation Runtime};
       C --> D{Fetch remoteEntry.js from Remote App Server};
       D --> E{Parse remoteEntry.js Manifest};
-      E --> F{Negotiate Shared Dependencies (e.g., React)};
-      F --> G{Dynamically Load Component Chunk(s) from Remote App Server};
+      E --> F{"Negotiate Shared Dependencies (e.g., React)"};
+      F --> G{"Dynamically Load Component Chunk(s) from Remote App Server"};
       G --> H{Execute Component Code in Host Context};
       H --> I[Component Rendered in Host App];
 
-      subgraph Host App (localhost:3000)
+      subgraph "Host App (localhost:3000)"
           A
           B
           C
@@ -429,7 +429,7 @@ Module Federation, introduced in Webpack 5, is a game-changer for run-time integ
           I
       end
 
-      subgraph Remote App Server (localhost:3001)
+      subgraph "Remote App Server (localhost:3001)"
           D
           G
           J[remoteEntry.js]
@@ -547,13 +547,13 @@ This is a killer feature of modern monorepo tools like Nx and Turborepo.
           F(Change in Lib C)
       end
 
-      subgraph Affected Projects (Build/Test)
+      subgraph "Affected Projects (Build/Test)"
           A
           B
           C
       end
 
-      subgraph Unaffected Projects (Use Cache)
+      subgraph "Unaffected Projects (Use Cache)"
           D
           E
       end

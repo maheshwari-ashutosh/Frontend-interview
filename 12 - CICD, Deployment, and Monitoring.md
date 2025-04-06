@@ -46,7 +46,7 @@ graph TD
     F --> G;
     G -- Yes --> H[5. Code Analysis / Security Audit];
     H --> I[6. Build Application];
-    I --> J[7. E2E Tests (Optional, on Preview Env)];
+    I --> J["7. E2E Tests (Optional, on Preview Env)"];
     J --> K[8. Store Build Artifacts];
     K --> L[Notify Success / Ready for CD];
     G -- No --> M[Notify Failure];

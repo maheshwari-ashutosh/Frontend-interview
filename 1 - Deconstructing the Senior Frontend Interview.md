@@ -47,7 +47,7 @@ While the exact process varies, most senior frontend interviews at leading tech 
 ```mermaid
 graph TD
     A[Application / Referral] --> B{Recruiter Screen};
-    B --> C{Technical Phone Screen(s)};
+    B --> C{"Technical Phone Screen(s)"};
     C --> D(On-Site / Virtual Loop);
     D --> E[Coding Round 1: Algo/DS];
     D --> F[Coding Round 2: Domain/UI];

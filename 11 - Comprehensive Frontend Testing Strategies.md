@@ -13,13 +13,13 @@ The concepts of the "Testing Pyramid" and the "Testing Trophy" provide valuable 
 
 ```mermaid
 graph TD
-    subgraph Testing Pyramid (Traditional)
+    subgraph "Testing Pyramid (Traditional)"
         E2E(End-to-End Tests)
         Integration(Integration Tests)
         Unit(Unit Tests)
     end
 
-    subgraph Testing Trophy (Modern Frontend)
+    subgraph "Testing Trophy (Modern Frontend)"
         E2E_Trophy(End-to-End Tests)
         Integration_Trophy(Integration Tests)
         Unit_Trophy(Unit Tests)

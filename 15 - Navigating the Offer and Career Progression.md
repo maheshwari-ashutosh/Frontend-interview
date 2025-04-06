@@ -76,7 +76,7 @@ flowchart TD
     B -- Offer Below Expectations --> D{Have Competing Offers?};
     D -- Yes --> E[Leverage Competing Offer in Negotiation];
     D -- No --> F[Leverage Market Data & Experience in Negotiation];
-    E --> G{Negotiate Components (Base, Equity, Bonus)};
+    E --> G{"Negotiate Components (Base, Equity, Bonus)"};
     F --> G;
     G --> H{Company Presents Revised Offer};
     H --> I{Revised Offer Acceptable?};
@@ -263,7 +263,7 @@ graph TD
         S1[Advanced System Design]
         S2[Cross-Team Influence]
         S3[Technical Strategy]
-        S4[Mentorship (Senior)]
+        S4["Mentorship (Senior)"]
     end
 
     subgraph Skills Needed for Management Track
